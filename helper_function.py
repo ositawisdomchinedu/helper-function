@@ -287,3 +287,20 @@ def calculate_results(y_true, y_pred):
                   "f1": model_f1}
   return model_results
 
+# Create function to read the lines of a document
+def get_lines(filename):
+  """
+  Reads filename (a text file) and returns the lines of text as a list.
+  
+  Args:
+      filename: a string containing the target filepath to read.
+  
+  Returns:
+      A list of strings with one string per line from the target filename.
+      For example:
+      ["this is the first line of filename",
+       "this is the second line of filename",
+       "..."]
+  """
+  with open(filename, "r") as f:
+    return f.readlines()
